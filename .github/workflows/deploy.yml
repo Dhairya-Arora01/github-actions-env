@@ -6,7 +6,7 @@ on:
       - dev
 
 env:
-  dbName: gha-demo
+  MONGODB_DB_NAME: gha-demo
 jobs:
   test:
     environment: testing
@@ -14,7 +14,7 @@ jobs:
     env:
       MONGODB_CLUSTER_ADDRESS: cluster0.bmloczq.mongodb.net
       MONGODB_USERNAME: dhairyarora0208in
-      MONGODB_PASSWORD: '#Dhairya0208'
+      MONGODB_PASSWORD: "#Dhairya0208"
       PORT: 8080
     steps:
       - name: Get Code
@@ -39,4 +39,4 @@ jobs:
       - name: Output information
         run: |
           'echo "MONGODB_USERNAME: ${{ env.MONGODB_USERNAME }}"'
-          'echo "dbName: ${{ env.dbName }}"'
+          'echo "MONGODB_DB_NAME: ${{ env.MONGODB_DB_NAME }}"'
